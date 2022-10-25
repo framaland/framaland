@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+
+
+
+
+void invertirCadena(char cadena[])
+{
+    int len = strlen(cadena);
+    int i;
+    for (i = 0; i < strlen(cadena) / 2; i++)
+    {
+        char temporal = cadena[i];
+        cadena[i] = cadena[len - i - 1];
+        cadena[len - i - 1] = temporal;
+    }
+}
+
+int main(void) {
+	char cadena[] = "Hola Mundo";
+	printf(" %s\n", cadena);
+	// Invertir
+	invertirCadena(cadena);
+	printf(" %s\n", cadena);
+  return 0;
+}
